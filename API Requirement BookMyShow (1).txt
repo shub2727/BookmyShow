@@ -1,0 +1,507 @@
+// Registration Page
+
+POST = /register
+
+Request Payload =
+{"fname":"Amit","lname":"Patil","dob":"1995-10-12","email":"amit@gmail.com","password":"123456"}
+
+Response =
+{"result":{"fname":"Amit","lname":"Patil","dob":"1995-10-12","email":"amit123@gmail.com","_id":"644e4e6adc82cf14db593dfc","__v":0},
+"auth":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.GZjIiwiX192IjowfSwiaWF0IjoxNjgyODUzNDgyfQ.N8qNQNzOBkyLxojDhVvx4fUpH4A14H-s94-Gv5VM6Mg"}
+
+Case 1 - false = If any validation issue
+
+Case 2 - JSON Response
+
+====================================================================
+
+// Login Page
+
+POST = /login
+
+Request Payload =
+{"email":"harsh@gmail.com","password":"123456"}
+
+Response =
+{"user":{"_id":"641756aab2a97510493aadfa","fname":"Harsh","lname":"Pawar","dob":"1996-12-01","email":"harsh@gmail.com","__v":0},
+"auth":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.IiwiX192IjowfSwiaWF0IjoxNjgyODU3NTgwfQ.b4wayYIDhG_qTYRiVAqawT6GTAediC3XU8PrWfejXlQ"}
+
+Case 1 - false = If wrong password
+
+Case 2 - JSON Response
+
+========================================================================
+
+// Home Page
+
+GET = http://localhost:5000/movies
+
+Response =
+
+[
+  {
+    "_id": "640ee3d9f1647a325b17bfa0",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089",
+    "movieName": "Avengers - End Game",
+    "releaseDate": "26th April 2022",
+    "category": "SuperHeroes",
+    "genre": "Action , Sci-Fi , Adventure",
+    "rating": "4.8",
+    "country": "USA",
+    "__v": 0
+  },
+  {
+    "_id": "640ee7adf1647a325b17bfb0",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/9618a8362525bd925e7bfa8d09068ff7_c068efe1-a3c0-4254-a7ed-f1d3de8a3908_480x.progressive.jpg?v=1573617262",
+    "movieName": "The Secret Life of Pets",
+    "releaseDate": "10th March 2023",
+    "category": "Animation",
+    "genre": "Adventure , Children's Film , Comedy",
+    "rating": "4.2",
+    "country": "USA",
+    "__v": 0
+  },
+  {
+    "_id": "640ee8bff1647a325b17bfcc",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/8880b6d5f3517441316b1284f5921b10_59d3534f-8fd7-4365-b17d-53ee91f7cdd4_480x.progressive.jpg?v=1573585466",
+    "movieName": "Titanic - 3D",
+    "releaseDate": "2nd May 2022",
+    "category": "History",
+    "genre": "Adventure , True Story",
+    "rating": "4.5",
+    "country": "USA",
+    "__v": 0
+  },
+  {
+    "_id": "640eea44f1647a325b17bfda",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/313099306_466556672134552_8738886800381528729_n_480x.progressive.jpg?v=1669136451",
+    "movieName": "Avatar - The Way of Water",
+    "releaseDate": "14th December 2022",
+    "category": "Animation",
+    "genre": "Adventure , Sci-Fi , Action",
+    "rating": "4.9",
+    "country": "USA",
+    "__v": 0
+  },
+  {
+    "_id": "640eec93f1647a325b17bfe2",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/0cc70cae1f62b215aee14211c78fe95e_cda1a52f-e010-476a-9cb8-cd4392848bf7_480x.progressive.jpg?v=1573584677",
+    "movieName": "Guardians of the galaxy",
+    "releaseDate": "28th February 2023",
+    "category": "SuperHeroes",
+    "genre": "Adventure , Sci-Fi , Action",
+    "rating": "4.1",
+    "country": "USA",
+    "__v": 0
+  },
+  {
+    "_id": "640ef9dff1647a325b17c02a",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/scream_bt9vtnjo_480x.progressive.jpg?v=1651685484",
+    "movieName": "SCREAM",
+    "releaseDate": "1st January 2023",
+    "category": "Horror",
+    "genre": "Drama , Mistery",
+    "rating": "3.8",
+    "country": "USA",
+    "__v": 0
+  },
+  {
+    "_id": "640f000bf1647a325b17c054",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/doctor-strange-in-the-multiverse-of-madness_wjx1jpyh_480x.progressive.jpg?v=1649951107",
+    "movieName": "Doctor Strange",
+    "releaseDate": "6th May 2022",
+    "category": "SuperHeroes",
+    "genre": "Action , Sci-Fi , Adventure",
+    "rating": "4.6",
+    "country": "USA",
+    "__v": 0
+  },
+  {
+    "_id": "640f011bf1647a325b17c058",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/jumaninextlevel.reg.ar_480x.progressive.jpg?v=1574697739",
+    "movieName": "Jumanji - Next Level",
+    "releaseDate": "13th December 2022",
+    "category": "Adventure",
+    "genre": "Action , Comedy",
+    "rating": "4.1",
+    "country": "USA",
+    "__v": 0
+  },
+  {
+    "_id": "6414d1045dbd34d32ffbbbf9",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/ant-man-and-the-wasp-quantumania_vjwwvg7f_480x.progressive.jpg?v=1676482725",
+    "movieName": "ANT-MAN : Quantumania",
+    "releaseDate": "17th February 2023",
+    "category": "SuperHeroes",
+    "genre": "Action , Journey , Sci-Fi",
+    "rating": "4.4",
+    "country": "USA",
+    "__v": 0
+  },
+  {
+    "_id": "6414d1eb5dbd34d32ffbbbfe",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/black-panther-wakanda-forever_bbma1guv_480x.progressive.jpg?v=1666882065",
+    "movieName": "Black Panther",
+    "releaseDate": "11th November 2022",
+    "category": "SuperHeroes",
+    "genre": "Action , Sci-Fi , Adventure",
+    "rating": "4.2",
+    "country": "USA",
+    "__v": 0
+  },
+  {
+    "_id": "6414d2fd5dbd34d32ffbbc04",
+    "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/9c4ca8724a551a5be280fb52c5c6b9bc_81bfb65d-b5ae-462f-a99b-19a975bd524e_480x.progressive.jpg?v=1573594789",
+    "movieName": "Finding Nemo 3D",
+    "releaseDate": "14th January 2023",
+    "category": "Animation",
+    "genre": "Adventure , Journey",
+    "rating": "4.0",
+    "country": "USA",
+    "__v": 0
+  }
+]
+
+
+========================================================================
+
+//  Seats Booking Form Page
+
+GET = http://localhost:5000/movie/640ee3d9f1647a325b17bfa0
+
+Response =
+{
+  "_id": "640ee3d9f1647a325b17bfa0",
+  "moviePoster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089",
+  "movieName": "Avengers - End Game",
+  "releaseDate": "26th April 2022",
+  "category": "SuperHeroes",
+  "genre": "Action , Sci-Fi , Adventure",
+  "rating": "4.8",
+  "country": "USA",
+  "__v": 0
+}
+========================================================================
+
+// Seats Booking Form Page
+// should be valid for only admin (use should not be able to see this data)
+
+GET = http://localhost:5000/view-tickets
+
+[
+  {
+    "_id": "64144176a898efa4f9d65aca",
+    "userName": "Amit",
+    "userEmail": "amit@gmail.com",
+    "movieName": "Avengers - End Game",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089",
+    "location": "Pune",
+    "theater": "City Pride ( Abhiruchi Mall )",
+    "bookedSeats": [
+      "A6"
+    ],
+    "time": "08:15 AM",
+    "food": "Coke (600ml)",
+    "price": "800",
+    "totalPrice": "960",
+    "cardNo": "8452142384521354",
+    "cardHolder": "Amit",
+    "expDate": "01/25",
+    "__v": 0
+  },
+  {
+    "_id": "64144d96a898efa4f9d65ae8",
+    "userName": "Divya",
+    "userEmail": "divya@gmail.com",
+    "movieName": "Titanic - 3D",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/8880b6d5f3517441316b1284f5921b10_59d3534f-8fd7-4365-b17d-53ee91f7cdd4_480x.progressive.jpg?v=1573585466",
+    "location": "Pune",
+    "theater": "IMAX ( Kothrud )",
+    "bookedSeats": [
+      "A6",
+      "A7"
+    ],
+    "time": "08:15 AM",
+    "food": "2 PopCorn Tub & 2 Coke",
+    "price": "800",
+    "totalPrice": "2020",
+    "cardNo": "5845121384744816",
+    "cardHolder": "DIVYA",
+    "expDate": "01/26",
+    "__v": 0
+  },
+  {
+    "_id": "64151fab49c2328635b52677",
+    "userName": "Harsh",
+    "userEmail": "harsh@gmail.com",
+    "movieName": "Finding Nemo 3D",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/9c4ca8724a551a5be280fb52c5c6b9bc_81bfb65d-b5ae-462f-a99b-19a975bd524e_480x.progressive.jpg?v=1573594789",
+    "location": "Pune",
+    "theater": "City Pride ( Abhiruchi Mall )",
+    "bookedSeats": [
+      "C6",
+      "C7"
+    ],
+    "time": "08:15 AM",
+    "food": "1 Pizza & 2 Coke Combo",
+    "price": "500",
+    "totalPrice": "1395",
+    "cardNo": "8452123457854210",
+    "cardHolder": "Harshwardhan",
+    "expDate": "05/25",
+    "__v": 0
+  },
+  {
+    "_id": "64156fd823dfba849cf43af9",
+    "userName": "Sumit",
+    "userEmail": "sumit@gmail.com",
+    "movieName": "ANT-MAN : Quantumania",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/ant-man-and-the-wasp-quantumania_vjwwvg7f_480x.progressive.jpg?v=1676482725",
+    "location": "Pune",
+    "theater": " Cinepolis ( Seasons Mall - Hadapsar )",
+    "bookedSeats": [
+      "A4",
+      "A5"
+    ],
+    "time": "09:00 AM",
+    "food": "1 Pizza & 2 Coke Combo",
+    "price": "800",
+    "totalPrice": "1935",
+    "cardNo": "4754245641248221",
+    "cardHolder": "Sumit",
+    "expDate": "04/28",
+    "__v": 0
+  },
+  {
+    "_id": "6415cbad0b219676d13a416e",
+    "userName": "Chinmay",
+    "userEmail": "chinmay@gmail.com",
+    "movieName": "Black Panther",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/black-panther-wakanda-forever_bbma1guv_480x.progressive.jpg?v=1666882065",
+    "location": "Delhi",
+    "theater": "Ambience Mall ( Vasant Kunj )",
+    "bookedSeats": [
+      "A6",
+      "A7"
+    ],
+    "time": "08:15 AM",
+    "food": "1 PopCorn Tub & 1 Coke",
+    "price": "800",
+    "totalPrice": "1728",
+    "cardNo": "854625467755",
+    "cardHolder": "Chinmay",
+    "expDate": "02/26",
+    "__v": 0
+  },
+  {
+    "_id": "64169d8d640a4dc817f19e4a",
+    "userName": "ketan",
+    "userEmail": "kkthakur9990@gmail.com",
+    "movieName": "Guardians of the galaxy",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/0cc70cae1f62b215aee14211c78fe95e_cda1a52f-e010-476a-9cb8-cd4392848bf7_480x.progressive.jpg?v=1573584677",
+    "location": "Pune",
+    "theater": "City Pride ( Abhiruchi Mall )",
+    "bookedSeats": [
+      "G5",
+      "G6"
+    ],
+    "time": "08:15 AM",
+    "food": "",
+    "price": "220",
+    "totalPrice": "440",
+    "cardNo": "234543553665",
+    "cardHolder": "Harshwardhan",
+    "expDate": "01/24",
+    "__v": 0
+  },
+  {
+    "_id": "6416b4f9640a4dc817f19f79",
+    "userName": "vikram",
+    "userEmail": "vikram@gmail.com",
+    "movieName": "Avatar - The Way of Water",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/313099306_466556672134552_8738886800381528729_n_480x.progressive.jpg?v=1669136451",
+    "location": "Pune",
+    "theater": "City Pride ( Abhiruchi Mall )",
+    "bookedSeats": [
+      "A9",
+      "A10"
+    ],
+    "time": "08:15 AM",
+    "food": "2 PopCorn Tub & 2 Coke",
+    "price": "800",
+    "totalPrice": "2020",
+    "cardNo": "3587432765432757",
+    "cardHolder": "Vikram",
+    "expDate": "05/25",
+    "__v": 0
+  },
+  {
+    "_id": "6417f78f52c4e0ccb342142f",
+    "userName": "Harsh",
+    "userEmail": "harsh@gmail.com",
+    "movieName": "Black Panther",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/black-panther-wakanda-forever_bbma1guv_480x.progressive.jpg?v=1666882065",
+    "location": "Pune",
+    "theater": " Cinepolis ( Seasons Mall - Hadapsar )",
+    "bookedSeats": [
+      "B5",
+      "B6",
+      "C7",
+      "C8"
+    ],
+    "time": "09:00 AM",
+    "food": "Coke (600ml)",
+    "price": "500",
+    "totalPrice": "2160",
+    "cardNo": "8765121654651013",
+    "cardHolder": "Harshwardhan",
+    "expDate": "01/24",
+    "__v": 0
+  }
+]
+
+========================================================================
+
+// Booking Form Page
+
+POST = http://localhost:5000/pay-now
+
+Request Payload =
+{
+  "userName": "Harsh",
+  "userEmail": "harsh@gmail.com",
+  "movieName": "Avengers - End Game",
+  "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089",
+  "location": "Pune",
+  "theater": "City Pride ( Abhiruchi Mall )",
+  "bookedSeats": [
+    "C8"
+  ],
+  "time": "08:15 AM",
+  "food": "2 PopCorn Tub & 2 Coke = 420",
+  "price": "500",
+  "totalPrice": 920
+}
+
+Response =
+{
+  "userName": "Harsh",
+  "userEmail": "harsh@gmail.com",
+  "movieName": "Avengers - End Game",
+  "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089",
+  "location": "Pune",
+  "theater": "City Pride ( Abhiruchi Mall )",
+  "bookedSeats": [
+    "C8"
+  ],
+  "time": "08:15 AM",
+  "food": "2 PopCorn Tub & 2 Coke = 420",
+  "price": "500",
+  "totalPrice": "920",
+  "_id": "646987a97b1b3edbf2422d74",
+  "__v": 0
+}
+
+
+=========================================================================
+
+// Payment Page
+
+POST = http://localhost:5000/ticket
+
+Request Payload =
+{
+  "totalPrice": "920",
+  "price": "500",
+  "userName": "Harsh",
+  "userEmail": "harsh@gmail.com",
+  "movieName": "Avengers - End Game",
+  "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089",
+  "location": "Pune",
+  "theater": "City Pride ( Abhiruchi Mall )",
+  "bookedSeats": [
+    "C8"
+  ],
+  "time": "08:15 AM",
+  "food": "2 PopCorn Tub & 2 Coke",
+  "cardHolder": "Harsh",
+  "cardNo": "5135786513248435",
+  "expDate": "01/25"
+}
+
+Response =
+{
+  "userName": "Harsh",
+  "userEmail": "harsh@gmail.com",
+  "movieName": "Avengers - End Game",
+  "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089",
+  "location": "Pune",
+  "theater": "City Pride ( Abhiruchi Mall )",
+  "bookedSeats": [
+    "C8"
+  ],
+  "time": "08:15 AM",
+  "food": "2 PopCorn Tub & 2 Coke",
+  "price": "500",
+  "totalPrice": "920",
+  "cardNo": "5135786513248435",
+  "cardHolder": "Harsh",
+  "expDate": "01/25",
+  "_id": "646988877b1b3edbf2422d76",
+  "__v": 0
+}
+
+
+
+===========================================================================
+
+// MY Booking / My Order 
+
+GET = /ticket-details/harsh@gmail.com
+
+Response =
+[
+  {
+    "_id": "6414cb33b75f0b6020b91fe6",
+    "userName": "Harsh",
+    "userEmail": "harsh@gmail.com",
+    "movieName": "Avatar - The Way of Water",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/313099306_466556672134552_8738886800381528729_n_480x.progressive.jpg?v=1669136451",
+    "location": "Pune",
+    "theater": "City Pride ( Abhiruchi Mall )",
+    "bookedSeats": [
+      "A5",
+      "A6",
+      "A7",
+      "A8"
+    ],
+    "time": "08:15 AM",
+    "food": "2 PopCorn Tub & 2 Coke",
+    "price": "800",
+    "totalPrice": "3258",
+    "cardNo": "8452314843254654",
+    "cardHolder": "Harshwardhan",
+    "expDate": "12/28",
+    "__v": 0
+  },
+  {
+    "_id": "646988877b1b3edbf2422d76",
+    "userName": "Harsh",
+    "userEmail": "harsh@gmail.com",
+    "movieName": "Avengers - End Game",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089",
+    "location": "Pune",
+    "theater": "City Pride ( Abhiruchi Mall )",
+    "bookedSeats": [
+      "C8"
+    ],
+    "time": "08:15 AM",
+    "food": "2 PopCorn Tub & 2 Coke",
+    "price": "500",
+    "totalPrice": "920",
+    "cardNo": "5135786513248435",
+    "cardHolder": "Harsh",
+    "expDate": "01/25",
+    "__v": 0
+  }
+]

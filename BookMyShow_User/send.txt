@@ -1,0 +1,7 @@
+Hi {FULLNAME},<br/>
+<br/>
+Your rigistration is almost completed.<br/>
+<br/>
+Thanks,<br/>
+Shubham.G.(Admin)<br/>
+

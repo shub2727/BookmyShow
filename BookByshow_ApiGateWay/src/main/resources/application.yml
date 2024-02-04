@@ -1,0 +1,77 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+server:
+  port: 9099
+spring:
+  application:
+    name: API-GATEWAY
+
+
+
+
+  cloud:
+    gateway:
+      routes:
+
+
+        - id: BOOKING-SERVICE
+          uri: lb://BOOKING-SERVICE
+          predicates:
+            - Path=/api/booking/**,/api/bookseat/**
+          filters:
+            - AuthenticationFilter
+
+
+        - id: FOOD-SERVICE
+          uri: lb://FOOD-SERVICE
+          predicates:
+            - Path=/api/food/**
+          filters:
+            - AuthenticationFilter
+
+        - id: MOVIES-SERVICE
+          uri: lb://MOVIES-SERVICE
+          predicates:
+            - Path=/api/movies/**
+          filters:
+            - AuthenticationFilter
+
+        - id: PAYMENT-SERVICE
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/api/payment/**
+          filters:
+            - AuthenticationFilter
+
+#        - id: SHOWTIE-SERVICE
+#          uri: lb://SHOWTIE-SERVICE
+#          predicates:
+#            - Path=/api/**
+
+#        - id: THEATER-SERVICE
+#          uri: lb://THEATER-SERVICE
+#          predicates:
+#            - Path=/**
+
+        - id: TICKET-SERVICE
+          uri: lb://TICKET-SERVICE
+          predicates:
+            - Path=/api/ticket/**
+          filters:
+            - AuthenticationFilter
+
+
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/users/**,/login/
+          filters:
+            - AuthenticationFilter
+
+

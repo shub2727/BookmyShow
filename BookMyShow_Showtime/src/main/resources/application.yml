@@ -1,0 +1,33 @@
+
+server:
+  port: 9094
+
+spring:
+  application:
+    name: "SHOWTIE-SERVICE"
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/showtime
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+
+
